@@ -55,11 +55,9 @@ function s.spcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	local type_monster=sg:IsExists(Card.IsType,1,nil,TYPE_MONSTER)
 	local type_spell=sg:IsExists(Card.IsType,1,nil,TYPE_SPELL)
 	local type_trap=sg:IsExists(Card.IsType,1,nil,TYPE_TRAP)
-	if sg then
-		if type_monster then e:SetLabel(1) end
-		if type_spell then e:SetLabel(2) end
-		if type_trap then e:SetLabel(3) end
-	end
+	if type_monster then e:SetLabel(1) end
+	if type_spell then e:SetLabel(2) end
+	if type_trap then e:SetLabel(3) end
 	Duel.Remove(sg,POS_FACEUP,REASON_COST)
 end
 function s.spfilter(c,e,tp,code)
